@@ -1,5 +1,6 @@
 VERSION 5.00
 Begin VB.Form lblStart 
+   BackColor       =   &H00C0FFFF&
    BorderStyle     =   1  'Fest Einfach
    Caption         =   "MBMenschAergereDichNicht"
    ClientHeight    =   7440
@@ -22,6 +23,7 @@ Begin VB.Form lblStart
    End
    Begin VB.PictureBox picWuerfel 
       Appearance      =   0  '2D
+      BackColor       =   &H00C0FFFF&
       BorderStyle     =   0  'Kein
       ForeColor       =   &H80000008&
       Height          =   1095
@@ -34,7 +36,7 @@ Begin VB.Form lblStart
       Begin VB.Shape shpWuerfelAuge 
          BackColor       =   &H00FFFFFF&
          BackStyle       =   1  'Undurchsichtig
-         BorderColor     =   &H0000C0C0&
+         BorderColor     =   &H00FF8080&
          Height          =   135
          Index           =   0
          Left            =   360
@@ -45,7 +47,7 @@ Begin VB.Form lblStart
       Begin VB.Shape shpWuerfelAuge 
          BackColor       =   &H00FFFFFF&
          BackStyle       =   1  'Undurchsichtig
-         BorderColor     =   &H0000C0C0&
+         BorderColor     =   &H00FF8080&
          Height          =   135
          Index           =   1
          Left            =   120
@@ -56,7 +58,7 @@ Begin VB.Form lblStart
       Begin VB.Shape shpWuerfelAuge 
          BackColor       =   &H00FFFFFF&
          BackStyle       =   1  'Undurchsichtig
-         BorderColor     =   &H0000C0C0&
+         BorderColor     =   &H00FF8080&
          Height          =   135
          Index           =   2
          Left            =   600
@@ -67,7 +69,7 @@ Begin VB.Form lblStart
       Begin VB.Shape shpWuerfelAuge 
          BackColor       =   &H00FFFFFF&
          BackStyle       =   1  'Undurchsichtig
-         BorderColor     =   &H0000C0C0&
+         BorderColor     =   &H00FF8080&
          Height          =   135
          Index           =   3
          Left            =   600
@@ -78,7 +80,7 @@ Begin VB.Form lblStart
       Begin VB.Shape shpWuerfelAuge 
          BackColor       =   &H00FFFFFF&
          BackStyle       =   1  'Undurchsichtig
-         BorderColor     =   &H0000C0C0&
+         BorderColor     =   &H00FF8080&
          Height          =   135
          Index           =   4
          Left            =   120
@@ -89,7 +91,7 @@ Begin VB.Form lblStart
       Begin VB.Shape shpWuerfelAuge 
          BackColor       =   &H00FFFFFF&
          BackStyle       =   1  'Undurchsichtig
-         BorderColor     =   &H0000C0C0&
+         BorderColor     =   &H00FF8080&
          Height          =   135
          Index           =   5
          Left            =   120
@@ -100,7 +102,7 @@ Begin VB.Form lblStart
       Begin VB.Shape shpWuerfelAuge 
          BackColor       =   &H00FFFFFF&
          BackStyle       =   1  'Undurchsichtig
-         BorderColor     =   &H0000C0C0&
+         BorderColor     =   &H00FF8080&
          Height          =   135
          Index           =   6
          Left            =   600
@@ -109,7 +111,7 @@ Begin VB.Form lblStart
          Width           =   135
       End
       Begin VB.Shape shpWuerfelPaper 
-         BackColor       =   &H00808080&
+         BackColor       =   &H00FFC0C0&
          BackStyle       =   1  'Undurchsichtig
          Height          =   855
          Left            =   0
@@ -118,7 +120,7 @@ Begin VB.Form lblStart
          Width           =   855
       End
       Begin VB.Shape shpWuerfelBorder 
-         BackColor       =   &H00404040&
+         BackColor       =   &H00FF0000&
          BackStyle       =   1  'Undurchsichtig
          Height          =   855
          Left            =   0
@@ -128,6 +130,7 @@ Begin VB.Form lblStart
       End
       Begin VB.Label lblWuerfel 
          Alignment       =   2  'Zentriert
+         BackColor       =   &H00C0FFFF&
          Caption         =   "1"
          Height          =   255
          Left            =   240
@@ -142,19 +145,10 @@ Begin VB.Form lblStart
       Left            =   240
       Top             =   1680
    End
-   Begin VB.Label lblHint 
-      BorderStyle     =   1  'Fest Einfach
-      Caption         =   "lblHint"
-      Height          =   375
-      Left            =   0
-      TabIndex        =   11
-      Top             =   7080
-      Width           =   6975
-   End
    Begin VB.Label lblPlatzierung 
       Alignment       =   2  'Zentriert
       BackStyle       =   0  'Transparent
-      Caption         =   "4"
+      Caption         =   "2"
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   48.75
@@ -165,10 +159,10 @@ Begin VB.Form lblStart
          Strikethrough   =   0   'False
       EndProperty
       Height          =   1155
-      Index           =   3
-      Left            =   240
-      TabIndex        =   9
-      Top             =   240
+      Index           =   1
+      Left            =   5580
+      TabIndex        =   7
+      Top             =   5640
       Visible         =   0   'False
       Width           =   1125
    End
@@ -196,27 +190,6 @@ Begin VB.Form lblStart
    Begin VB.Label lblPlatzierung 
       Alignment       =   2  'Zentriert
       BackStyle       =   0  'Transparent
-      Caption         =   "2"
-      BeginProperty Font 
-         Name            =   "Arial"
-         Size            =   48.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   1155
-      Index           =   1
-      Left            =   5760
-      TabIndex        =   7
-      Top             =   5640
-      Visible         =   0   'False
-      Width           =   1125
-   End
-   Begin VB.Label lblPlatzierung 
-      Alignment       =   2  'Zentriert
-      BackStyle       =   0  'Transparent
       Caption         =   "1"
       BeginProperty Font 
          Name            =   "Arial"
@@ -235,10 +208,112 @@ Begin VB.Form lblStart
       Visible         =   0   'False
       Width           =   1125
    End
+   Begin VB.Label lblPlatzierung 
+      Alignment       =   2  'Zentriert
+      BackStyle       =   0  'Transparent
+      Caption         =   "4"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   48.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   1155
+      Index           =   3
+      Left            =   240
+      TabIndex        =   9
+      Top             =   240
+      Visible         =   0   'False
+      Width           =   1125
+   End
+   Begin VB.Label Label4 
+      BackStyle       =   0  'Transparent
+      Caption         =   "nicht"
+      BeginProperty Font 
+         Name            =   "Comic Sans MS"
+         Size            =   18
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   -1  'True
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   555
+      Left            =   4800
+      TabIndex        =   15
+      Top             =   4680
+      Width           =   975
+   End
+   Begin VB.Label Label3 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Dich"
+      BeginProperty Font 
+         Name            =   "Comic Sans MS"
+         Size            =   18
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   -1  'True
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   555
+      Left            =   1260
+      TabIndex        =   14
+      Top             =   4620
+      Width           =   915
+   End
+   Begin VB.Label Label2 
+      BackStyle       =   0  'Transparent
+      Caption         =   "ärgere"
+      BeginProperty Font 
+         Name            =   "Comic Sans MS"
+         Size            =   18
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   -1  'True
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   555
+      Left            =   4740
+      TabIndex        =   13
+      Top             =   1800
+      Width           =   1395
+   End
+   Begin VB.Label Label1 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Mensch"
+      BeginProperty Font 
+         Name            =   "Comic Sans MS"
+         Size            =   18
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   -1  'True
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   555
+      Left            =   960
+      TabIndex        =   12
+      Top             =   1800
+      Width           =   1395
+   End
+   Begin VB.Label lblHint 
+      BorderStyle     =   1  'Fest Einfach
+      Caption         =   "lblHint"
+      Height          =   375
+      Left            =   0
+      TabIndex        =   11
+      Top             =   7080
+      Width           =   6975
+   End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H00FF0000&
+      BackColor       =   &H0000FFFF&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H00C00000&
+      BorderColor     =   &H00008080&
       BorderWidth     =   2
       Height          =   375
       Index           =   15
@@ -248,9 +323,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H00FF0000&
+      BackColor       =   &H0000FFFF&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H00C00000&
+      BorderColor     =   &H00008080&
       BorderWidth     =   2
       Height          =   375
       Index           =   14
@@ -260,9 +335,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H00FF0000&
+      BackColor       =   &H0000FFFF&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H00C00000&
+      BorderColor     =   &H00008080&
       BorderWidth     =   2
       Height          =   375
       Index           =   13
@@ -272,9 +347,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H00FF0000&
+      BackColor       =   &H0000FFFF&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H00C00000&
+      BorderColor     =   &H00008080&
       BorderWidth     =   2
       Height          =   375
       Index           =   12
@@ -284,9 +359,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H000000FF&
+      BackColor       =   &H00000000&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H000000C0&
+      BorderColor     =   &H00808080&
       BorderWidth     =   2
       Height          =   375
       Index           =   11
@@ -296,9 +371,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H000000FF&
+      BackColor       =   &H00000000&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H000000C0&
+      BorderColor     =   &H00808080&
       BorderWidth     =   2
       Height          =   375
       Index           =   10
@@ -308,9 +383,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H000000FF&
+      BackColor       =   &H00000000&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H000000C0&
+      BorderColor     =   &H00808080&
       BorderWidth     =   2
       Height          =   375
       Index           =   9
@@ -320,9 +395,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H000000FF&
+      BackColor       =   &H00000000&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H000000C0&
+      BorderColor     =   &H00808080&
       BorderWidth     =   2
       Height          =   375
       Index           =   8
@@ -332,37 +407,49 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H0000FF00&
+      BackColor       =   &H000000FF&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H0000C000&
+      BorderColor     =   &H000000C0&
       BorderWidth     =   2
       Height          =   375
       Index           =   7
-      Left            =   6360
+      Left            =   6180
       Shape           =   3  'Kreis
       Top             =   6240
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H0000FF00&
+      BackColor       =   &H000000FF&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H0000C000&
+      BorderColor     =   &H000000C0&
       BorderWidth     =   2
       Height          =   375
       Index           =   6
-      Left            =   5760
+      Left            =   5580
       Shape           =   3  'Kreis
       Top             =   6240
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H0000FF00&
+      BackColor       =   &H000000FF&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H0000C000&
+      BorderColor     =   &H000000C0&
       BorderWidth     =   2
       Height          =   375
       Index           =   5
-      Left            =   6360
+      Left            =   6180
+      Shape           =   3  'Kreis
+      Top             =   5640
+      Width           =   375
+   End
+   Begin VB.Shape shpSpieler 
+      BackColor       =   &H000000FF&
+      BackStyle       =   1  'Undurchsichtig
+      BorderColor     =   &H000000C0&
+      BorderWidth     =   2
+      Height          =   375
+      Index           =   4
+      Left            =   5580
       Shape           =   3  'Kreis
       Top             =   5640
       Width           =   375
@@ -371,18 +458,6 @@ Begin VB.Form lblStart
       BackColor       =   &H0000FF00&
       BackStyle       =   1  'Undurchsichtig
       BorderColor     =   &H0000C000&
-      BorderWidth     =   2
-      Height          =   375
-      Index           =   4
-      Left            =   5760
-      Shape           =   3  'Kreis
-      Top             =   5640
-      Width           =   375
-   End
-   Begin VB.Shape shpSpieler 
-      BackColor       =   &H0000FFFF&
-      BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H00008080&
       BorderWidth     =   2
       Height          =   375
       Index           =   3
@@ -392,9 +467,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H0000FFFF&
+      BackColor       =   &H0000FF00&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H00008080&
+      BorderColor     =   &H0000C000&
       BorderWidth     =   2
       Height          =   375
       Index           =   2
@@ -404,9 +479,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H0000FFFF&
+      BackColor       =   &H0000FF00&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H00008080&
+      BorderColor     =   &H0000C000&
       BorderWidth     =   2
       Height          =   375
       Index           =   1
@@ -416,9 +491,9 @@ Begin VB.Form lblStart
       Width           =   375
    End
    Begin VB.Shape shpSpieler 
-      BackColor       =   &H0000FFFF&
+      BackColor       =   &H0000FF00&
       BackStyle       =   1  'Undurchsichtig
-      BorderColor     =   &H00008080&
+      BorderColor     =   &H0000C000&
       BorderWidth     =   2
       Height          =   375
       Index           =   0
@@ -440,7 +515,7 @@ Begin VB.Form lblStart
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H0000C0C0&
+      ForeColor       =   &H0000C000&
       Height          =   435
       Index           =   0
       Left            =   3960
@@ -449,7 +524,7 @@ Begin VB.Form lblStart
       Width           =   240
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00C0FFC0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   0
@@ -471,7 +546,7 @@ Begin VB.Form lblStart
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00C00000&
+      ForeColor       =   &H00008080&
       Height          =   435
       Index           =   3
       Left            =   360
@@ -492,7 +567,7 @@ Begin VB.Form lblStart
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H000000C0&
+      ForeColor       =   &H00808080&
       Height          =   435
       Index           =   2
       Left            =   2760
@@ -513,7 +588,7 @@ Begin VB.Form lblStart
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H0000C000&
+      ForeColor       =   &H000000C0&
       Height          =   435
       Index           =   1
       Left            =   6360
@@ -522,7 +597,7 @@ Begin VB.Form lblStart
       Width           =   240
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   55
@@ -532,7 +607,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   54
@@ -542,7 +617,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   53
@@ -552,7 +627,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   52
@@ -562,7 +637,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   51
@@ -572,7 +647,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   50
@@ -582,7 +657,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   49
@@ -592,7 +667,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   48
@@ -602,7 +677,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00C0C0FF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   47
@@ -612,7 +687,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00C0C0FF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   46
@@ -622,7 +697,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00C0C0FF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   45
@@ -632,7 +707,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00C0C0FF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   44
@@ -642,7 +717,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00C0FFC0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   43
@@ -652,7 +727,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00C0FFC0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   42
@@ -662,7 +737,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00C0FFC0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   41
@@ -672,7 +747,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00C0FFC0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   40
@@ -682,7 +757,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   15
@@ -692,7 +767,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   14
@@ -702,7 +777,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   13
@@ -712,7 +787,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   12
@@ -722,7 +797,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   11
@@ -732,7 +807,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   10
@@ -742,7 +817,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   9
@@ -752,7 +827,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   8
@@ -762,47 +837,47 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00C0C0FF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   7
-      Left            =   6360
+      Left            =   6180
       Shape           =   3  'Kreis
       Top             =   6240
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00C0C0FF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   6
-      Left            =   5760
+      Left            =   5580
       Shape           =   3  'Kreis
       Top             =   6240
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00C0C0FF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   5
-      Left            =   6360
+      Left            =   6180
+      Shape           =   3  'Kreis
+      Top             =   5640
+      Width           =   495
+   End
+   Begin VB.Shape shpStart 
+      BackColor       =   &H00C0C0FF&
+      BackStyle       =   1  'Undurchsichtig
+      Height          =   495
+      Index           =   4
+      Left            =   5580
       Shape           =   3  'Kreis
       Top             =   5640
       Width           =   495
    End
    Begin VB.Shape shpStart 
       BackColor       =   &H00C0FFC0&
-      BackStyle       =   1  'Undurchsichtig
-      Height          =   495
-      Index           =   4
-      Left            =   5760
-      Shape           =   3  'Kreis
-      Top             =   5640
-      Width           =   495
-   End
-   Begin VB.Shape shpStart 
-      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   3
@@ -812,7 +887,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00C0FFC0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   2
@@ -822,7 +897,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00C0FFC0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   1
@@ -832,7 +907,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpStart 
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00C0FFC0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   0
@@ -932,7 +1007,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H00C0FFFF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   30
@@ -1032,7 +1107,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00C0C0C0&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   20
@@ -1132,7 +1207,7 @@ Begin VB.Form lblStart
       Width           =   495
    End
    Begin VB.Shape shpFeld 
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00C0C0FF&
       BackStyle       =   1  'Undurchsichtig
       Height          =   495
       Index           =   10
@@ -1327,6 +1402,20 @@ Begin VB.Form lblStart
       Y1              =   480
       Y2              =   480
    End
+   Begin VB.Shape Shape1 
+      BorderColor     =   &H000000FF&
+      BorderWidth     =   10
+      Height          =   6975
+      Left            =   60
+      Top             =   60
+      Width           =   6855
+   End
+   Begin VB.Shape Shape2 
+      Height          =   6735
+      Left            =   180
+      Top             =   180
+      Width           =   6615
+   End
 End
 Attribute VB_Name = "lblStart"
 Attribute VB_GlobalNameSpace = False
@@ -1340,7 +1429,7 @@ Attribute VB_Exposed = False
 '// Compiler: MS Visual Basic 6.0
 '// Autor   : Manfred Becker
 '// E-Mail  : mani.becker@web.de
-'// Url     : http://manib.ma.funpic.de
+'// Url     : https://github.com/ManiBecker/MBMenschAergereDichNicht
 '// Modul   : frmMain
 '// Version : 1.00
 '// Datum   : 04.09.2008
@@ -1372,7 +1461,7 @@ End Sub
 Private Sub InitializeGame()
     Dim i As Integer
     Dim j As Integer
-    Dim index As Integer
+    Dim Index As Integer
     Randomize Timer
     
     platz = 0
@@ -1386,14 +1475,14 @@ Private Sub InitializeGame()
         lblPlatzierung(i).Visible = False
         For j = 0 To 43
             If j < 40 Then
-                index = i * 10 + j
-                If index >= 40 Then
-                    index = index - 40
+                Index = i * 10 + j
+                If Index >= 40 Then
+                    Index = Index - 40
                 End If
             Else
-                index = zielIndex(i) + (j - 40)
+                Index = zielIndex(i) + (j - 40)
             End If
-            streckenIndex(i, j) = index
+            streckenIndex(i, j) = Index
         Next j
     Next i
     
