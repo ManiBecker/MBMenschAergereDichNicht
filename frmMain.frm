@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form lblStart 
+Begin VB.Form frmMain 
    BackColor       =   &H00C0FFFF&
    BorderStyle     =   1  'Fest Einfach
    Caption         =   "MBMenschAergereDichNicht"
@@ -1417,7 +1417,7 @@ Begin VB.Form lblStart
       Width           =   6615
    End
 End
-Attribute VB_Name = "lblStart"
+Attribute VB_Name = "frmMain"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
@@ -1510,10 +1510,12 @@ Private Sub InitializeGame()
     wuerfelPosLeft(2) = 1560
     wuerfelPosTop(3) = 1560
     wuerfelPosLeft(3) = 1560
-    spielerFarbe(0) = "Gelb"
-    spielerFarbe(1) = "Grün"
-    spielerFarbe(2) = "Rot"
-    spielerFarbe(3) = "Blau"
+    spielerFarbe(0) = "Grün"
+    spielerFarbe(1) = "Rot"
+    spielerFarbe(2) = "Schwarz"
+    spielerFarbe(3) = "Gelb"
+    
+    picWuerfel.Visible = False
     
     player = 0
     Call NextPlayer
@@ -1691,7 +1693,8 @@ Private Sub ZieheSieler(p As Integer, i As Integer, s As Integer)
     'Figur umsetzen
     shpSpieler(i).Left = shpFeld(z).Left + dx
     shpSpieler(i).Top = shpFeld(z).Top + dy
-    
+    Call VBSleep(200)
+        
     'Fertig?
     Dim fertig As Boolean
     fertig = True
@@ -1733,7 +1736,7 @@ Private Sub BewegeSpieler(p As Integer, s As Integer)
             'Kann gezogen werden?
             z = streckenIndex(p, shpSpieler(i).Tag + s)
             
-            If shpFeld(z).Tag = "" Then 'Or shpFeld(z).Tag <> n Then
+            If shpFeld(z).Tag = "" Then
                 Call ZieheSieler(p, i, s)
                 Exit Sub
             End If
@@ -1865,15 +1868,21 @@ Private Function Wuerfle() As Integer
     i = Int(Rnd(1) * 6) + 1
     
     Call ZeichneWuerfel(i)
-    Call VBSleep(20)
+    Call VBSleep(200)
     
     Wuerfle = i
 End Function
 
 Private Sub ZeichneWuerfel(i As Integer)
     If i >= 1 And i <= 6 Then
+        If picWuerfel.Visible = False Then
+            picWuerfel.Visible = True
+        End If
         lblWuerfel.Caption = i
     Else
+        If picWuerfel.Visible = True Then
+            picWuerfel.Visible = False
+        End If
         lblWuerfel.Caption = "?"
     End If
     
