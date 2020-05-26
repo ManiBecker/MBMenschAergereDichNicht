@@ -1445,7 +1445,8 @@ Dim player As Integer
 Dim startIndex(4) As Integer
 Dim zielIndex(4) As Integer
 Dim spielerIndex(4) As Integer
-Dim spielerFarbe(4) As String
+Dim spielerColorStr(4) As String
+Dim spielerColor(4) As Long
 Dim wuerfelPosTop(4) As Integer
 Dim wuerfelPosLeft(4) As Integer
 Dim anzahlWuerfe(4) As Integer
@@ -1510,10 +1511,14 @@ Private Sub InitializeGame()
     wuerfelPosLeft(2) = 1560
     wuerfelPosTop(3) = 1560
     wuerfelPosLeft(3) = 1560
-    spielerFarbe(0) = "Grün"
-    spielerFarbe(1) = "Rot"
-    spielerFarbe(2) = "Schwarz"
-    spielerFarbe(3) = "Gelb"
+    spielerColorStr(0) = "Grün"
+    spielerColorStr(1) = "Rot"
+    spielerColorStr(2) = "Schwarz"
+    spielerColorStr(3) = "Gelb"
+    spielerColor(0) = vbGreen '&HFF00&
+    spielerColor(1) = vbRed '&HFF&
+    spielerColor(2) = vbBlack '&H0&
+    spielerColor(3) = vbYellow '&HFFFF&
     
     picWuerfel.Visible = False
     
@@ -1575,7 +1580,7 @@ Private Function ErmittleSpielBeginner() As Integer
         platzierung(i) = 0
     Next i
 
-    ZeigeHinweis spielerFarbe(s) & " beginnt!"
+    ZeigeHinweis spielerColorStr(s) & " beginnt!"
     ErmittleSpielBeginner = s
 End Function
 
@@ -1665,6 +1670,8 @@ Private Sub ZieheSieler(p As Integer, i As Integer, s As Integer)
     Dim f As Integer
     Dim z As Integer
     Dim g As Integer
+    Dim j As Integer
+    Dim o As Integer
     
     f = streckenIndex(p, shpSpieler(i).Tag)
     z = streckenIndex(p, shpSpieler(i).Tag + s)
@@ -1682,6 +1689,11 @@ Private Sub ZieheSieler(p As Integer, i As Integer, s As Integer)
         shpSpieler(g).Tag = ""
 
         shpStart(g).Tag = g
+        
+        For j = 0 To 3
+            If shpSpieler(g).BackColor = spielerColor(j) Then o = j
+        Next j
+        ZeigeHinweis "Spieler " & spielerColorStr(p) & " schlägt Gegner " & spielerColorStr(o)
     End If
     
     'das neue Feld wird besetzt
@@ -1710,7 +1722,7 @@ Private Sub ZieheSieler(p As Integer, i As Integer, s As Integer)
         lblPlatzierung(p).Caption = platz
         lblPlatzierung(p).Visible = True
         platzierung(p) = platz
-        ZeigeHinweis "Spieler " & spielerFarbe(p) & " ist auf Platz " & platz
+        ZeigeHinweis "Spieler " & spielerColorStr(p) & " ist auf Platz " & platz
     End If
 End Sub
 
